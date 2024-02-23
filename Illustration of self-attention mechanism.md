@@ -3,9 +3,9 @@
 ## **Defintion of Attention Mechanism**
 
 The ***Attention Mechanism*** is a technique used in neural networks to dynamically focus on certain parts of the input data over others, enhancing the model's ability to learn and interpret complex data patterns.  This definition is from ChatGPT, but in a simple word, the attention mechanism attempts to emphraize certain parts while ignore others.  An example here is as follow ([source](https://easyaitech.medium.com/%E4%B8%80%E6%96%87%E7%9C%8B%E6%87%82-attention-%E6%9C%AC%E8%B4%A8%E5%8E%9F%E7%90%86-3%E5%A4%A7%E4%BC%98%E7%82%B9-5%E5%A4%A7%E7%B1%BB%E5%9E%8B-e4fbe4b6d030#:~:text=Attention%20%E7%9A%84%E6%9C%AC%E8%B4%A8%E6%98%AF%E4%BB%80%E4%B9%88,%E4%BA%86%E5%9B%BE%E7%89%87%E7%9A%84%E7%84%A6%E7%82%B9%E4%B8%8A%E3%80%82)). When you look at the picture below, you attention will highly possbile be attracted by "锦江饭店" rather than other elements such as the telephone number above it and "喜运来大饭店" behind it. This explains what we want to achieve via the ***Attention Mechanism.***
-
+<p align="center">
 <img src="https://miro.medium.com/v2/resize:fit:1200/0*ha55rlpVPahkDXsa.jpg" alt="img" style="zoom:67%;" />
-
+<p>
 ## Self-attention and the intuition behind
 
 Self-attention is the most important branch in the family of ***Attention Mechanism*** and it attempts to highlight the relationship between the target element and its neighbors. For example, if you have sentence **I want to go home for dinner because we will have hotpot tonight**, probably the attention should be paid to words <u>home</u> ,<u>dinner</u> and <u>hotpot.</u> So what should we do to achieve this? 
@@ -48,4 +48,4 @@ Multiply the attention score and $V$ and sum them up to get the $\hat v$ (Step 3
 $$
 \hat v_1 = \sum_{i=1}^n {Softmax(s_{1i})v_{i}} \in \R^{1 \times m}
 $$
-![Self-attention](/Users/chenxilin/Documents/fluent python/Deep Learning/Self-attention.png)
+![Self-attention](Self-attention.png)
